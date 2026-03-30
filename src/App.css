@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+.app {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+
+ 
+}
+.container {
+  width: 600px;
+  height: 400px;
+  background-image: url(./assets/mario_back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+
+}
+.game-box {
+  display: flex;
+  height: 300px;
+  position: relative;
+
+}
+.box-img {
+  margin-bottom: 50px;
+}
+
+.mario-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: center;
+}
+.mario-btn {
+  margin-top: 16px;
+}
+
+.mario-btn button{
+  background-color: #ffcf00; 
+  color: #000;
+  padding: 10px 20px;
+  border: 2px solid #000;    
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 4px 4px 0px #000;
+}
+.mario-btn button:active {
+  /* 그림자 제거하기 */
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000;
+}
+.countBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+.mario-img {
+  display: block;
+  transition: transform 0.1s ease-in-out;
+}
+.mario-img.jump {
+  animation: marioJump 0.5s ease-in-out;
+}
+
+@keyframes marioJump {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-50px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
